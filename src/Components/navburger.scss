@@ -1,0 +1,77 @@
+$burger-line-margin: 5px;
+$burger-line-height: 2.7px;
+$burger-offset-y: $burger-line-margin+$burger-line-height;
+
+.no-animation {
+    -webkit-animation: none !important;
+    animation: none !important; 
+}
+
+.nav-burger{
+    align-self: center;
+    margin-right: 7%;
+    
+}
+
+.nav-burger {
+    
+    display: none;
+    width : 30px;
+    .line1{
+        animation: line_1_animation 0.5s ease-in forwards;
+    }
+    .line2{
+        margin: $burger-line-margin 0;
+        animation: line_2_animation 0.5s ease-in forwards;
+    }
+    .line3{
+        animation: line_3_animation 0.5s ease-in forwards;
+    }
+    @media only screen and (max-width: 600px) {
+        display: inline-block;
+    }
+}
+
+.line1,
+.line2,
+.line3{
+    height: 2.7px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+@keyframes line_1_animation{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY($burger-offset-y);
+    }
+    100%{
+        transform: translateY($burger-offset-y) rotate(45deg);
+    }
+}
+
+@keyframes line_2_animation{
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes line_3_animation{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-$burger-offset-y);
+    }
+    100%{
+        transform: translateY(-$burger-offset-y) rotate(-45deg);
+    }
+}
