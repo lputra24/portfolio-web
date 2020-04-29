@@ -1,0 +1,54 @@
+*{
+    margin:0;
+}
+.landing{
+    height: 100vh;
+    background-color: #222629;
+    background-size: cover;
+    background-image: url('./Resources/professional-developer-programmer-working-software-website-design-coding-technology-writing-codes-database-company-office-global-cyber-connection-technology/189.jpg');
+    background-blend-mode: soft-light;
+}
+
+.wrapper{
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+
+h1{
+    overflow: hidden;
+    color:#86c232;
+    letter-spacing: .05em;
+    white-space: nowrap;
+    width:0;
+    font-size: 3vw;
+    border-right: 0.15em solid transparent;
+    animation: typing 6s steps(40,end) forwards,
+    blink 1s infinite;
+    @media only screen and (max-width: 600px) {
+        font-size: 4vw;
+    }
+}
+
+@keyframes typing{
+    0%{
+        width:0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes blink{
+    0%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: #86c232;
+    }
+}
+
+

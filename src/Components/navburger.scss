@@ -2,20 +2,20 @@ $burger-line-margin: 5px;
 $burger-line-height: 2.7px;
 $burger-offset-y: $burger-line-margin+$burger-line-height;
 
+.disabled{
+    width:0 !important;
+}
+
 .no-animation {
     -webkit-animation: none !important;
     animation: none !important; 
 }
 
-.nav-burger{
-    align-self: center;
-    margin-right: 7%;
-    
-}
 
-.nav-burger {
-    
+.nav-burger {  
     display: none;
+    align-self: center;
+    margin: 30px 20px;
     width : 30px;
     .line1{
         animation: line_1_animation 0.5s ease-in forwards;
@@ -51,7 +51,35 @@ $burger-offset-y: $burger-line-margin+$burger-line-height;
     height: 2.7px;
     width: 100%;
     border-radius: 20px;
-    background-color: #000;
+    background-color: #86c232;
+}
+
+.navbar-mobile{
+    position: relative;
+    // opacity: 95%;
+    height: 100vh;
+    background-color: #222629;
+    z-index: 10000;
+    width: 25vw;
+    transition: width 0.5s ease-in;
+    overflow: hidden;
+    @media only screen and (min-width: 600px) {
+        display: none;
+    }
+    float: right;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+    padding:10px;
+    li{
+        padding: 20px 0;
+    }
+    a{
+        text-decoration: none;
+        color: #86c232;
+    }
 }
 
 @keyframes line_1_animation{
