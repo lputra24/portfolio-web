@@ -9,6 +9,21 @@
     background-blend-mode: soft-light;
 }
 
+.section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height:1000px;
+    
+}
+
+.section-title{
+    text-align: center;
+    color: #86c232;
+    font-size: 2em;
+    letter-spacing: .1em;
+}
+
 .wrapper{
     display:flex;
     justify-content: center;
@@ -18,7 +33,7 @@
     transform: translate(-50%,-50%);
 }
 
-h1{
+.typed{
     overflow: hidden;
     color:#86c232;
     letter-spacing: .05em;

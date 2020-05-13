@@ -1,10 +1,11 @@
 import React from 'react';
 import './navbar.scss';
 import Navburger from './navburger.js'
-import logo from '../Resources/logo-green.png'
+import logo from '../../Resources/logo-green.png'
 
 function Navbar() {
   return (
+    <div className="parent">
         <div className="navbar">
             <div className="logo">
                 <a href="#"><img src={logo} alt="Leonardus Elbert"/></a>
@@ -17,6 +18,8 @@ function Navbar() {
             </div>
             <Navburger></Navburger>
         </div>
+    </div>
+
   );
 }
 
